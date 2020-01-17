@@ -1,24 +1,25 @@
-#include <stdio.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int mex=1e8;
-long long int arr[mex];
+# define  mex 1e8
+bool arr[100000000];
 
-void main()
+int  main()
 {
-    int l,r;
+    int l,r,j;
    
     cin>>l>>r;
    
-    int cnt=1;
+    int cnt=0;
    
     arr[0]=true;
    
     arr[1]=true;
    
-    for(int i=2;i<mex;i++)
+    for(int i=2;i*i<mex;i++)
     {
-        for(int j=i;j<mex;j++)
+        if(arr[i]==false)
+        for(j=i*i;j<mex;j+=i)
         arr[j]=true;
     }
    
