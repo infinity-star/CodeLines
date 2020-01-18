@@ -23,7 +23,7 @@ int  main()
         arr[j]=true;
     }
    
-    for(int i=l;i<r;i++)
+    for(int i=l;i<=r;i++)
     {
         if(arr[i]==false) cnt++;
     }
